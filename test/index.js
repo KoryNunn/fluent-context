@@ -28,11 +28,15 @@ test('single level', t => {
     var wrappedApi = fluentContext(api);
 
     var foo = wrappedApi.foo;
-    var bar = wrappedApi.bar;
-    var barFoo = bar().foo;
-    var barFooFoo = barFoo().foo;
 
     t.equal(foo(), 0);
+
+    var bar = wrappedApi.bar;
+    var barFoo = bar().foo;
+
     t.equal(barFoo(), 1);
+
+    var barFooFoo = barFoo().foo;
+
     t.equal(barFooFoo(), 2);
 })
