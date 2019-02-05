@@ -30,6 +30,17 @@ test('single level', t => {
     var foo = wrappedApi.foo;
 
     t.equal(foo(), 0);
+});
+
+test('multiple levels', t => {
+    t.plan(3);
+
+    var api = createApi();
+    var wrappedApi = fluentContext(api);
+
+    var foo = wrappedApi.foo;
+
+    t.equal(foo(), 0);
 
     var bar = wrappedApi.bar;
     var barFoo = bar().foo;
@@ -39,4 +50,4 @@ test('single level', t => {
     var barFooFoo = barFoo().foo;
 
     t.equal(barFooFoo(), 2);
-})
+});
