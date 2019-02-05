@@ -47,7 +47,7 @@ test('multiple levels', t => {
 
     t.equal(barFoo(), 1);
 
-    var barFooFoo = barFoo().foo;
+    var barBarFoo = bar().bar().foo;
 
-    t.equal(barFooFoo(), 2);
+    t.equal(barBarFoo(), 2);
 });
