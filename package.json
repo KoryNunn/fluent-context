@@ -1,6 +1,6 @@
 {
   "name": "fluent-context",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Binds context to fluent API's so they can be used in functional programming patterns.",
   "main": "index.js",
   "scripts": {
