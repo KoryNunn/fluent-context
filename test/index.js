@@ -9,7 +9,7 @@ var createApi = (fooValue = 0) => ({
     bar: function(){
         return createApi(this._foo + 1);
     }
-})
+});
 
 test('test api works', t => {
     t.plan(3);
