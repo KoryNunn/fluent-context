@@ -1,7 +1,7 @@
 {
   "name": "fluent-context",
   "version": "1.0.0",
-  "description": "",
+  "description": "Binds context to fluent API's so they can be used in functional programming patterns.",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -10,5 +10,17 @@
   "license": "ISC",
   "devDependencies": {
     "tape": "^4.9.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/fluent-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/fluent-context/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/fluent-context#readme"
 }
