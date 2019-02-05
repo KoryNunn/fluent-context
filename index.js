@@ -3,7 +3,7 @@ module.exports = function fluentContext(api){
         throw new Error('This environment does not support Proxy\'s');
     }
 
-    if(!api|| typeof api !== 'object'){
+    if(!api|| !(typeof api === 'object' || typeof api === 'function')){
         return api;
     }
 

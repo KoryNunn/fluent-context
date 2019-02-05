@@ -79,16 +79,18 @@ test('multiple levels', t => {
 });
 
 test('works for function-apis', t => {
-    t.plan(2);
+    t.plan(3);
 
     var api = createFunctionBasedApi();
     var wrappedApi = fluentContext(api);
 
+    t.equal(wrappedApi(), 0);
+
     var bar = wrappedApi.bar;
 
-    t.equal(bar()(), 0);
+    t.equal(bar()(), 1);
 
     var barBar = bar().bar();
 
-    t.equal(barBar(), 1);
+    t.equal(barBar(), 2);
 });
